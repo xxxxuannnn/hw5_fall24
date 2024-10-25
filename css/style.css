@@ -1,0 +1,31 @@
+.card{
+    flex-basis: 450px;
+
+
+}
+.pricing{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width:900px){
+    header{
+        display:flex;
+        flex-flow:row nowrap;
+        justify-content:space-between;
+    }
+    .nav_links{
+        flex-direction:row;
+    }
+
+}
+
+@media all and(prefers-reduced-motion:reduce){
+
+}
+
+
+@media print{
+
+}
