@@ -1,31 +1,144 @@
-.card{
-    flex-basis: 450px;
 
-
+/* step1 */
+@keyframes logoAnimation {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+    to {
+      width: 475px;
+      opacity: 1;
+    }
 }
+  
+.logo {
+    animation: logoAnimation 5s ease forwards;
+}
+  
+@media (prefers-reduced-motion: reduce) {
+    .logo {
+      animation: none;
+    }
+  }
+  /* step2 */
+body {
+    font-family: 'Poppins', serif;
+    background: #f1f1f1 url('../images/concrete_seamless.png') repeat;
+}
+/* step3 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:column;
+}
+/* step 4 */
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* or any other spacing value */
+    flex-direction:column;
+    
+}
+
+/* #step5 */
+a:link,
+a:visited {
+  color: blue; /* Use the desired color */
+}
+
+/* #step6 */
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+/* step 7 */
+.card {
+    overflow: hidden;
+    flex-basis: 450px;
+}
+
+
+/* step 8*/
 .pricing{
     display: flex;
     flex-flow:row wrap;
     justify-content: center;
 }
-
+/* step9 */
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+/* step10 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
 @media screen and (min-width:900px){
+    /* step11 */
     header{
         display:flex;
         flex-flow:row nowrap;
         justify-content:space-between;
     }
+
     .nav_links{
         flex-direction:row;
+    }
+    /* step12 */
+    .card{
+        flex-basis:275px;
+    }
+    .pricing{
+        align-items:center;
+    }
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
 
 }
 
 @media all and(prefers-reduced-motion:reduce){
 
+    @media print {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background: none;
+        }
+        .nav_links {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pricing {
+            display: flex;
+            align-items: flex-end;
+        }
+        .card {
+            border: 2px solid #45ADDD;
+            flex-basis: 325px;
+        }
+        .gallery {
+            display: none;
+        }
+        .card::before {
+            content: '\1F44D '; /* Unicode for thumbs up emoji */
+            color: yellow; /* Or desired color, as yellow may not print for some */
+            font-size: 1.5rem; /* Adjust size as needed */
+            margin-right: 5px; /* Add spacing before the text */
+        }
+    }
+
 }
 
 
-@media print{
 
-}
