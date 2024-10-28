@@ -35,8 +35,8 @@ header {
 /* step 4 */
 .nav_links {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* or any other spacing value */
+    /* justify-content: space-between; */
+    /* gap: 20px; or any other spacing value */
     flex-direction:column;
     
 }
